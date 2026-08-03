@@ -1,7 +1,7 @@
 {
   "name": "Java",
   "scopeName": "source.java",
-  "type": "modern-tree-sitter",
+  "type": "tree-sitter",
   "parser": "tree-sitter-java",
   "fileTypes": ["java"],
   "comments": {

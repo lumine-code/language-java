@@ -113,7 +113,7 @@
 ; it's out of an ERROR state; this should catch all references no matter how
 ; long the chain is.
 (scoped_type_identifier
-  (type_identifier) @_IGNORE
+  (type_identifier) @_IGNORE_
   (#is? test.descendantOfType ERROR)
   (#set! capture.final true))
 

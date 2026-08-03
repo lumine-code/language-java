@@ -44,7 +44,7 @@
 ; ==========
 
 (interface_declaration
-  "interface" @storage.modifier.interface
+  "interface" @storage.modifier.interface.java
   name: (identifier) @entity.name.type.interface.java)
 
 (interface_declaration body: (_) @meta.interface.body.java)
@@ -143,7 +143,7 @@
 (type_arguments (wildcard "extends" @storage.modifier.extends.java))
 (type_arguments (wildcard (super) @storage.modifier.super.java))
 
-(type_bound "extends" @storage.modifier.extends)
+(type_bound "extends" @storage.modifier.extends.java)
 (type_bound "&" @punctuation.separator.types.java)
 
 

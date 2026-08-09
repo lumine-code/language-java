@@ -2,11 +2,11 @@ describe("Unified expression language grammar", function () {
   let grammar = null;
 
   beforeEach(function () {
-    atom.config.set("language.useTreeSitterParsers", false);
+    lumine.config.set("language.useTreeSitterParsers", false);
 
-    waitsForPromise(() => atom.packages.activatePackage("language-java"));
+    waitsForPromise(() => lumine.packages.activatePackage("language-java"));
 
-    runs(() => (grammar = atom.grammars.grammarForScopeName("source.java.el")));
+    runs(() => (grammar = lumine.grammars.grammarForScopeName("source.java.el")));
   });
 
   it("parses the grammar", function () {

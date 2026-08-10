@@ -1,12 +1,12 @@
 describe("Unified expression language grammar", function () {
   let grammar = null;
 
-  beforeEach(function () {
+  beforeEach(async () => {
     lumine.config.set("language.useTreeSitterParsers", false);
 
-    waitsForPromise(() => lumine.packages.activatePackage("language-java"));
+    await lumine.packages.activatePackage("language-java");
 
-    runs(() => (grammar = lumine.grammars.grammarForScopeName("source.java.el")));
+    grammar = lumine.grammars.grammarForScopeName("source.java.el");
   });
 
   it("parses the grammar", function () {

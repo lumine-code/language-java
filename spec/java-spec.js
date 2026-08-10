@@ -1,12 +1,12 @@
 describe("Java grammar", function () {
   let grammar = null;
 
-  beforeEach(function () {
+  beforeEach(async () => {
     lumine.config.set("language.useTreeSitterParsers", false);
 
-    waitsForPromise(() => lumine.packages.activatePackage("language-java"));
+    await lumine.packages.activatePackage("language-java");
 
-    runs(() => (grammar = lumine.grammars.grammarForScopeName("source.java")));
+    grammar = lumine.grammars.grammarForScopeName("source.java");
   });
 
   it("parses the grammar", function () {

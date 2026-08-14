@@ -12,12 +12,12 @@ Java language support.
 
 ## Installation
 
-To install `language-java` search for _language-java_ in the Install pane of the Lumine settings or run `lumine --install lumine-code/language-java`.
+To install `language-java` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-java`.
 
 ## Services
 
-- **hyperlink.injection** (`^1.0.0`): consumed to highlight URLs inside code and comments as clickable links.
-- **todo.injection** (`^1.0.0`): consumed to highlight `TODO`-style markers inside comments.
+- `hyperlink.injection`: consumed to highlight URLs inside code and comments as clickable links.
+- `todo.injection`: consumed to highlight `TODO`-style markers inside comments.
 
 ## Contributing
 

@@ -9,7 +9,7 @@
   },
   "treeSitter": {
     "parserSource": "github:tree-sitter/tree-sitter-java#v0.23.5",
-    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.13",
     "grammar": "tree-sitter-java/tree-sitter-java.wasm",
     "highlightsQuery": "tree-sitter-java/highlights.scm",
     "tagsQuery": "tree-sitter-java/tags.scm",

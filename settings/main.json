@@ -1,6 +1,6 @@
 {
   ".source.java": {
-    "language": {
+    "editor": {
       "commentStart": "// ",
       "commentDelimiters": {
         "block": ["/*", "*/"],
@@ -12,7 +12,7 @@
     }
   },
   ".text.html.jsp": {
-    "language": {
+    "editor": {
       "foldEndPattern": "\\*\\*/|^\\s*\\}",
       "commentStart": "<%-- ",
       "commentEnd": " --%>",
@@ -24,12 +24,12 @@
     }
   },
   ".text.junit-test-report": {
-    "language": {
+    "editor": {
       "foldEndPattern": "^\\s*(\\}|// \\}\\}\\}$)"
     }
   },
   ".source.java-properties": {
-    "language": {
+    "editor": {
       "commentStart": "# ",
       "commentDelimiters": {
         "line": "#"
@@ -37,7 +37,7 @@
     }
   },
   ".keyword.other.documentation.javadoc.java": {
-    "language": {
+    "editor": {
       "completions": [
         "author",
         "deprecated",

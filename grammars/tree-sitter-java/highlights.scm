@@ -139,9 +139,17 @@
   "volatile"
 ] @storage.modifier._TYPE_.java
 
-(type_arguments (wildcard "?" @storage.type.generic.wildcard.java))
-(type_arguments (wildcard "extends" @storage.modifier.extends.java))
-(type_arguments (wildcard (super) @storage.modifier.super.java))
+(("?" @storage.type.generic.wildcard.java)
+  (#is? test.typeAt "parent wildcard")
+  (#is? test.typeAt "parent.parent type_arguments"))
+
+(("extends" @storage.modifier.extends.java)
+  (#is? test.typeAt "parent wildcard")
+  (#is? test.typeAt "parent.parent type_arguments"))
+
+((super) @storage.modifier.super.java
+  (#is? test.typeAt "parent wildcard")
+  (#is? test.typeAt "parent.parent type_arguments"))
 
 (type_bound "extends" @storage.modifier.extends.java)
 (type_bound "&" @punctuation.separator.types.java)
@@ -395,14 +403,20 @@
     ")" @punctuation.definition.expression.end.bracket.round.java
     (#set! capture.final true)))
 
-(formal_parameters
-  "(" @punctuation.definition.parameters.begin.bracket.round.java
-  ")" @punctuation.definition.parameters.end.bracket.round.java
+(("(" @punctuation.definition.parameters.begin.bracket.round.java)
+  (#is? test.typeAt "parent formal_parameters")
   (#set! capture.final true))
 
-(argument_list
-  "(" @punctuation.definition.arguments.begin.bracket.round.java
-  ")" @punctuation.definition.arguments.end.bracket.round.java
+((")" @punctuation.definition.parameters.end.bracket.round.java)
+  (#is? test.typeAt "parent formal_parameters")
+  (#set! capture.final true))
+
+(("(" @punctuation.definition.arguments.begin.bracket.round.java)
+  (#is? test.typeAt "parent argument_list")
+  (#set! capture.final true))
+
+((")" @punctuation.definition.arguments.end.bracket.round.java)
+  (#is? test.typeAt "parent argument_list")
   (#set! capture.final true))
 
 
@@ -413,8 +427,12 @@
 "[" @punctuation.definition.array.begin.bracket.square.java
 "]" @punctuation.definition.array.end.bracket.square.java
 
-(type_arguments "<" @punctuation.definition.type.begin.bracket.angle.java)
-(type_arguments ">" @punctuation.definition.type.end.bracket.angle.java)
+(("<" @punctuation.definition.type.begin.bracket.angle.java)
+  (#is? test.typeAt "parent type_arguments"))
+((">" @punctuation.definition.type.end.bracket.angle.java)
+  (#is? test.typeAt "parent type_arguments"))
 
-(type_parameters "<" @punctuation.definition.type.begin.bracket.angle.java)
-(type_parameters ">" @punctuation.definition.type.end.bracket.angle.java)
+(("<" @punctuation.definition.type.begin.bracket.angle.java)
+  (#is? test.typeAt "parent type_parameters"))
+((">" @punctuation.definition.type.end.bracket.angle.java)
+  (#is? test.typeAt "parent type_parameters"))

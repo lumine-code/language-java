@@ -4,8 +4,8 @@ Java language support.
 
 ## Features
 
-- **Grammars**: provides Tree-sitter grammars built from [tree-sitter-java](https://github.com/tree-sitter/tree-sitter-java) and TextMate grammars derived from [atom/language-java](https://github.com/atom/language-java).
-- **Syntax highlighting**: full grammar coverage for Java and JSP files.
+- **Grammars**: provides Tree-sitter grammars for Java and properties.
+- **Syntax highlighting**: covers Java and Java properties; the central `language-log` package provides JUnit report highlighting.
 - **Snippets**: shortcuts for common declarations and control structures.
 - **Code folding**: collapse blocks, classes, and comments.
 - **Comment toggling**: line and block comment support.

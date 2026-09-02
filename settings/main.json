@@ -5,27 +5,7 @@
       "commentDelimiters": {
         "block": ["/*", "*/"],
         "line": "//"
-      },
-      "foldEndPattern": "^\\s*(\\}|// \\}\\}\\}$)",
-      "increaseIndentPattern": "^.*\\{(\\}|[^}\"']*)$|^\\s*(public|private|protected):\\s*$",
-      "decreaseIndentPattern": "^(.*\\*/)?\\s*\\}|^\\s*(public|private|protected):\\s*$"
-    }
-  },
-  ".text.html.jsp": {
-    "editor": {
-      "foldEndPattern": "\\*\\*/|^\\s*\\}",
-      "commentStart": "<%-- ",
-      "commentEnd": " --%>",
-      "commentDelimiters": {
-        "block": ["<%--", "-->"]
-      },
-      "increaseIndentPattern": "^\\s*<(([^!/?]|%)(?!.+?([/%]>|</.+?>))|[%!]--\\s*$)",
-      "decreaseIndentPattern": "^\\s*(</[^>]+>|-->|--%>)"
-    }
-  },
-  ".text.junit-test-report": {
-    "editor": {
-      "foldEndPattern": "^\\s*(\\}|// \\}\\}\\}$)"
+      }
     }
   },
   ".source.java-properties": {

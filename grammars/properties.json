@@ -1,0 +1,20 @@
+{
+  "name": "Java Properties",
+  "scopeName": "source.java-properties",
+  "type": "tree-sitter",
+  "parser": "tree-sitter-properties",
+  "injectionNames": ["properties", "jproperties"],
+  "fileTypes": ["properties"],
+  "comments": {
+    "start": "# ",
+    "line": "#"
+  },
+  "treeSitter": {
+    "parserSource": "github:tree-sitter-grammars/tree-sitter-properties#6310671b24d4e04b803577b1c675d765cbd5773b",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.13",
+    "grammar": "properties.wasm",
+    "highlightsQuery": "properties-highlights.scm",
+    "localsQuery": "properties-locals.scm",
+    "tagsQuery": "properties-tags.scm"
+  }
+}

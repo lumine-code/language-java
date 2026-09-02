@@ -11,7 +11,7 @@
   },
   "treeSitter": {
     "parserSource": "github:tree-sitter-grammars/tree-sitter-properties#6310671b24d4e04b803577b1c675d765cbd5773b",
-    "wasmBuildTool": "tree-sitter-cli#v0.26.13",
+    "wasmBuildTool": "tree-sitter-cli#v0.27.0",
     "grammar": "properties.wasm",
     "highlightsQuery": "properties-highlights.scm",
     "localsQuery": "properties-locals.scm",

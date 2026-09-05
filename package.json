@@ -12,8 +12,6 @@
   ],
   "description": "Java language support.",
   "keywords": [
-    "jsp",
-    "bsh",
     "properties",
     "jvm",
     "tree-sitter"

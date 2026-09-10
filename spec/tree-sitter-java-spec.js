@@ -78,7 +78,7 @@ describe("WASM Tree-sitter Java grammar", () => {
   });
 
   it("keeps unbounded containers leaf-rooted and trims CRLF line comments", () => {
-    const query = fs.readFileSync(highlightsPath, "utf8");
+    const query = fs.readFileSync(highlightsPath, "utf8").replaceAll("\r\n", "\n");
 
     expect(query).not.toMatch(/\((?:formal_parameters|argument_list|type_arguments)\s*\n\s*"/);
     expect(query).toContain("(#is? test.childOfType formal_parameters)");

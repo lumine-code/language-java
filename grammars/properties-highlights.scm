@@ -2,9 +2,11 @@
 ; 19071296d3d643b48615ee574a20e8a03ac40872 (Apache-2.0).
 
 ((comment) @comment.line.number-sign.java-properties
-  (#match? @comment.line.number-sign.java-properties "^#"))
+  (#match? @comment.line.number-sign.java-properties "^#")
+  (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
 ((comment) @comment.line.exclamation.java-properties
-  (#match? @comment.line.exclamation.java-properties "^!"))
+  (#match? @comment.line.exclamation.java-properties "^!")
+  (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
 ((comment) @punctuation.definition.comment.java-properties
   (#set! adjust.startAndEndAroundFirstMatchOf "^[#!]"))
 

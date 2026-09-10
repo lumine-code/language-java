@@ -2,7 +2,8 @@
 ; ========
 
 ((line_comment) @comment.line.double-slash.java
-  (#match? @comment.line.double-slash.java "^//"))
+  (#match? @comment.line.double-slash.java "^//")
+  (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
 
 ((line_comment) @punctuation.definition.comment.begin.java
   (#match? @punctuation.definition.comment.begin.java "^//")
@@ -139,17 +140,14 @@
   "volatile"
 ] @storage.modifier._TYPE_.java
 
-(("?" @storage.type.generic.wildcard.java)
-  (#is? test.typeAt "parent wildcard")
-  (#is? test.typeAt "parent.parent type_arguments"))
+(wildcard
+  "?" @storage.type.generic.wildcard.java)
 
-(("extends" @storage.modifier.extends.java)
-  (#is? test.typeAt "parent wildcard")
-  (#is? test.typeAt "parent.parent type_arguments"))
+(wildcard
+  "extends" @storage.modifier.extends.java)
 
-((super) @storage.modifier.super.java
-  (#is? test.typeAt "parent wildcard")
-  (#is? test.typeAt "parent.parent type_arguments"))
+(wildcard
+  (super) @storage.modifier.super.java)
 
 (type_bound "extends" @storage.modifier.extends.java)
 (type_bound "&" @punctuation.separator.types.java)
@@ -403,20 +401,20 @@
     ")" @punctuation.definition.expression.end.bracket.round.java
     (#set! capture.final true)))
 
-(("(" @punctuation.definition.parameters.begin.bracket.round.java)
-  (#is? test.typeAt "parent formal_parameters")
+("(" @punctuation.definition.parameters.begin.bracket.round.java
+  (#is? test.childOfType formal_parameters)
   (#set! capture.final true))
 
-((")" @punctuation.definition.parameters.end.bracket.round.java)
-  (#is? test.typeAt "parent formal_parameters")
+(")" @punctuation.definition.parameters.end.bracket.round.java
+  (#is? test.childOfType formal_parameters)
   (#set! capture.final true))
 
-(("(" @punctuation.definition.arguments.begin.bracket.round.java)
-  (#is? test.typeAt "parent argument_list")
+("(" @punctuation.definition.arguments.begin.bracket.round.java
+  (#is? test.childOfType argument_list)
   (#set! capture.final true))
 
-((")" @punctuation.definition.arguments.end.bracket.round.java)
-  (#is? test.typeAt "parent argument_list")
+(")" @punctuation.definition.arguments.end.bracket.round.java
+  (#is? test.childOfType argument_list)
   (#set! capture.final true))
 
 
@@ -427,12 +425,7 @@
 "[" @punctuation.definition.array.begin.bracket.square.java
 "]" @punctuation.definition.array.end.bracket.square.java
 
-(("<" @punctuation.definition.type.begin.bracket.angle.java)
-  (#is? test.typeAt "parent type_arguments"))
-((">" @punctuation.definition.type.end.bracket.angle.java)
-  (#is? test.typeAt "parent type_arguments"))
-
-(("<" @punctuation.definition.type.begin.bracket.angle.java)
-  (#is? test.typeAt "parent type_parameters"))
-((">" @punctuation.definition.type.end.bracket.angle.java)
-  (#is? test.typeAt "parent type_parameters"))
+("<" @punctuation.definition.type.begin.bracket.angle.java
+  (#is? test.childOfType "type_arguments type_parameters"))
+(">" @punctuation.definition.type.end.bracket.angle.java
+  (#is? test.childOfType "type_arguments type_parameters"))

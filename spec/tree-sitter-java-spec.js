@@ -22,7 +22,7 @@ describe("WASM Tree-sitter Java grammar", () => {
     await languageMode.ready;
   }
 
-  function rawCaptures(startRow, endRow) {
+  async function rawCaptures(startRow, endRow) {
     const options =
       startRow == null
         ? undefined
@@ -30,8 +30,8 @@ describe("WASM Tree-sitter Java grammar", () => {
             startPosition: new Point(startRow, 0),
             endPosition: new Point(endRow, 0),
           };
-    const layer = languageMode.rootLanguageLayer;
-    return layer.queries.highlightsQuery.captures(layer.tree.rootNode, options);
+    const groups = await editor.getGrammarQueryCaptureGroups("highlightsQuery", options);
+    return groups.find(({ grammar }) => grammar === editor.getGrammar())?.captures ?? [];
   }
 
   it("passes grammar tests", async () => {
@@ -104,19 +104,19 @@ describe("WASM Tree-sitter Java grammar", () => {
   }
 }`);
 
-    const parameterCaptures = rawCaptures(3, 5).filter((capture) =>
+    const parameterCaptures = (await rawCaptures(3, 5)).filter((capture) =>
       capture.name.startsWith("punctuation.definition.parameters."),
     );
     expect(parameterCaptures.map((capture) => capture.node.startPosition.row)).toEqual([4]);
     expect(parameterCaptures.every((capture) => capture.node.startPosition.row >= 3)).toBe(true);
 
-    const argumentCaptures = rawCaptures(7, 9).filter((capture) =>
+    const argumentCaptures = (await rawCaptures(7, 9)).filter((capture) =>
       capture.name.startsWith("punctuation.definition.arguments."),
     );
     expect(argumentCaptures.map((capture) => capture.node.startPosition.row)).toEqual([8]);
     expect(argumentCaptures.every((capture) => capture.node.startPosition.row >= 7)).toBe(true);
 
-    const typeCaptures = rawCaptures(10, 12).filter(
+    const typeCaptures = (await rawCaptures(10, 12)).filter(
       (capture) =>
         capture.name.startsWith("punctuation.definition.type.") ||
         capture.name === "storage.type.generic.wildcard.java" ||
@@ -134,7 +134,7 @@ describe("WASM Tree-sitter Java grammar", () => {
     lines.push(");", "} }");
     await setUp(lines.join("\r\n"));
 
-    const tileCaptures = rawCaptures(2998, 3004);
+    const tileCaptures = await rawCaptures(2998, 3004);
     expect(tileCaptures.length).toBeLessThanOrEqual(64);
     expect(
       tileCaptures

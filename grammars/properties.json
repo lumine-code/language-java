@@ -14,6 +14,7 @@
     "wasmBuildTool": "tree-sitter-cli#v0.27.0",
     "grammar": "properties.wasm",
     "highlightsQuery": "properties-highlights.scm",
+    "injectionsQuery": "properties-injections.scm",
     "localsQuery": "properties-locals.scm",
     "tagsQuery": "properties-tags.scm"
   }

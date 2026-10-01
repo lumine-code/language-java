@@ -13,6 +13,7 @@
     "wasmBuildTool": "tree-sitter-cli#v0.27.0",
     "grammar": "java.wasm",
     "highlightsQuery": "java-highlights.scm",
+    "injectionsQuery": "java-injections.scm",
     "tagsQuery": "java-tags.scm",
     "indentsQuery": "java-indents.scm",
     "foldsQuery": "java-folds.scm"

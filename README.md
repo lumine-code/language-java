@@ -2,6 +2,8 @@
 
 Java language support.
 
+Fork of [pulsar-edit/pulsar](https://github.com/pulsar-edit/pulsar) (`packages/language-java`).
+
 ## Features
 
 - **Grammars**: provides Tree-sitter grammars for Java and properties.

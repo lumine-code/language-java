@@ -12,6 +12,8 @@ Fork of [pulsar-edit/pulsar](https://github.com/pulsar-edit/pulsar) (`packages/l
 - **Code folding**: collapse blocks, classes, and comments.
 - **Comment toggling**: line and block comment support.
 
+![Java syntax highlighting at the default editor font size.](.github/demo.png)
+
 ## Installation
 
 To install `language-java` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-java`.

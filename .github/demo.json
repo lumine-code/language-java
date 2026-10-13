@@ -1,0 +1,16 @@
+{
+  "title": "language-java",
+  "description": "Java syntax highlighting in the editor.",
+  "recordedOn": "2026-10-13",
+  "sourceRevision": "a3bcd6fc4854502c170a1967cba45d0cdaf8a2da",
+  "mode": "normal",
+  "fontSettings": "default",
+  "images": [
+    {
+      "file": "demo.png",
+      "label": "Java syntax highlighting at the default editor font size.",
+      "width": 1100,
+      "height": 494
+    }
+  ]
+}

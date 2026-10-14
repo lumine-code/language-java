@@ -1,16 +1,61 @@
 {
   "title": "language-java",
-  "description": "Java syntax highlighting in the editor.",
-  "recordedOn": "2026-10-13",
-  "sourceRevision": "a3bcd6fc4854502c170a1967cba45d0cdaf8a2da",
+  "description": "Java syntax highlighting at the default editor font size.",
+  "recordedOn": "2026-10-14",
+  "sourceRevision": "5d938c4d6f273183d33eec7366ad584a823bd218",
+  "themeSourceRevision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
   "mode": "normal",
   "fontSettings": "default",
+  "scenario": "demo.js",
+  "recipeHash": "c445ccd9c0abbf5bac2b818d0aeda85c1755b7181f47cb51c06926d497c5b436",
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "electron": "44.7.0",
+    "chrome": "152.0.7977.130",
+    "devicePixelRatio": 1,
+    "locale": "en-GB",
+    "fontFamily": "Fira Code, Menlo, DejaVu Sans Mono, Consolas, monospace",
+    "fontSize": 14,
+    "themes": ["one-day-syntax", "one-day-ui"]
+  },
+  "viewport": { "width": 1100, "height": 494 },
+  "cornerRadius": 10,
+  "sources": {
+    "editor": {
+      "revision": "c4d7a05fe6960ae6fb041981d6cf13e9c0286b17",
+      "dirty": true,
+      "workingTreeHash": "af0ec098e764416df9522f3c6e555050b520e4700da382b2b983b2ff3742bd0a"
+    },
+    "package": {
+      "revision": "5d938c4d6f273183d33eec7366ad584a823bd218",
+      "dirty": true,
+      "workingTreeHash": "ee49c7bf21bfe2326c196d41314506b4c8752d0f36a57babe29d6b9c376fa8db"
+    },
+    "language-java": {
+      "revision": "5d938c4d6f273183d33eec7366ad584a823bd218",
+      "dirty": true,
+      "workingTreeHash": "ee49c7bf21bfe2326c196d41314506b4c8752d0f36a57babe29d6b9c376fa8db"
+    },
+    "one-theme": {
+      "revision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
+      "dirty": true,
+      "workingTreeHash": "50ec2f83a6347dd8113870992ec4eb2be4014f3d9e12213c2f51b543f1eca793"
+    }
+  },
+  "fixtures": [
+    {
+      "file": "example.java",
+      "sha256": "d50328c08bdb686379f79d4d609789d166ddebc12cc4e394e9777878ff6e0e24"
+    }
+  ],
   "images": [
     {
       "file": "demo.png",
       "label": "Java syntax highlighting at the default editor font size.",
       "width": 1100,
-      "height": 494
+      "height": 494,
+      "sha256": "c3fcebec079d23236718448448b95db247705d303c1949e2306c4ca86f1c9b83"
     }
   ]
 }

@@ -16,7 +16,7 @@
       }
     }
   },
-  ".keyword.other.documentation.javadoc.java": {
+  ".comment.block.documentation.javadoc.java": {
     "editor": {
       "completions": [
         "author",

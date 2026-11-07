@@ -69,6 +69,9 @@ suitability for any purpose.
 Source: https://github.com/tree-sitter/tree-sitter-java
 Revision: v0.23.5
 
+Parser source: github:tree-sitter/tree-sitter-java#v0.23.5
+Resolved commit: 94703d5a6bed02b98e438d7cad1136c01a60ba2c
+
 Original file: LICENSE
 
 MIT License
@@ -97,6 +100,9 @@ SOFTWARE.
 ----- BEGIN THIRD-PARTY LICENSE: parser:tree-sitter-grammars_tree-sitter-properties -----
 Source: https://github.com/tree-sitter-grammars/tree-sitter-properties
 Revision: 6310671b24d4e04b803577b1c675d765cbd5773b
+
+Parser source: github:tree-sitter-grammars/tree-sitter-properties#6310671b24d4e04b803577b1c675d765cbd5773b
+Resolved commit: 6310671b24d4e04b803577b1c675d765cbd5773b
 
 Original file: LICENSE
 
